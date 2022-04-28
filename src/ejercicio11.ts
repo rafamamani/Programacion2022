@@ -13,7 +13,7 @@ if (posicion ===1) {
   if (posicion ===2) {
     console.log("Entregar medalla de PLATA");
 } else{
-  if (posicion ===2) {
+  if (posicion ===3) {
     console.log("Entregar medalla de BRONCE");
 } else{
   console.log("Entregar certificado de PARTICIPACION");
