@@ -11,9 +11,11 @@ let arregloB: number = new Array(6);
 let arregloSuma: number = new Array(6);
 let i: number;
 //FUNCION PARA CAGAR ARREGLO
-function cargarArreglo(arreglo: number): number {
+function cargarArreglo(arreglo: number, numero: number): number {
   for (i = 0; i < 6; i++) {
-    arreglo[i] = Number(prompt("Carga de Arreglo", "INGRESE UN NUMERO"));
+    arreglo[i] = Number(
+      prompt("Carga de Arreglo" + numero, "INGRESE UN NUMERO")
+    );
   }
   return arreglo;
 }
@@ -53,7 +55,7 @@ function mostrarResultado(
 
 //**************** PROGRAMA PRINCIPAL **************************//
 
-cargarArreglo(arregloA);
-cargarArreglo(arregloB);
+cargarArreglo(arregloA, 1);
+cargarArreglo(arregloB, 2);
 sumarArreglos(arregloA, arregloB);
 mostrarResultado(arregloA, arregloB, arregloSuma);
