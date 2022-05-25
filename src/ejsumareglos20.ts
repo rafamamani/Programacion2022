@@ -14,7 +14,10 @@ let i: number;
 function cargarArreglo(arreglo: number, numero: number): number {
   for (i = 0; i < 6; i++) {
     arreglo[i] = Number(
-      prompt("Carga de Arreglo" + numero, "INGRESE UN NUMERO")
+      prompt(
+        "Carga de Arreglo " + numero,
+        "INGRESE EL " + (i + 1) + "/6 NUMEROS"
+      )
     );
   }
   return arreglo;
