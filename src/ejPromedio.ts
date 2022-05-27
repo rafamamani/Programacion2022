@@ -9,12 +9,13 @@ como representar la información.
 // -------  DECLARO Y DEFINO VARIABLES  ---------------------------------
 
 let alumnos: string = new Array(3);
-//let arregloNotas: number = new Array(3);
+let nombre: string;
 let notas1trimestre: number = new Array(3);
 let notas2trimestre: number = new Array(3);
 let notas3trimestre: number = new Array(3);
 let promedioAnual: number = new Array(3);
 let i: number;
+let prom: number;
 //FUNCION PARA CAGAR ARREGLO del tipo String
 function cargarNombres(alumnos: string): string {
   for (i = 0; i < 3; i++) {
@@ -87,7 +88,23 @@ function mostrarResultado(
     );
   }
 }
+//------- FUNCION PARA BUSCAR UN ELEMENTO DEL ARREGLO  ------------------//
+function buscarAlumno(nombre: string, alumnos: string): string {
+  console.log("BUSQUEDA DE UN ALUMNO PARA SACAR EL PROMEDIO");
+  nombre = prompt("INDIQUE EL NOMBRE DE UN ALUMNO PARA CALCULAR SU PROMEDIO");
 
+  for (i = 0; i < 3; i++) {
+           
+    if (nombre === alumnos[i]) {
+      prom = promedioAnual[i];
+      console.log("El promedio de " + nombre + " es: " + prom);
+    }
+  }
+  console.log("el nombre ingrsado no pertenece a la lista de Alumnos"); 
+  return nombre;
+ 
+}
+      
 //**************** PROGRAMA PRINCIPAL **************************//
 
 cargarNombres(alumnos);
@@ -96,3 +113,4 @@ cargarNotas(notas2trimestre, 2);
 cargarNotas(notas3trimestre, 3);
 sacarPromedio(notas1trimestre, notas2trimestre, notas3trimestre);
 mostrarResultado(notas1trimestre, notas2trimestre, notas3trimestre, alumnos);
+buscarAlumno(nombre, alumnos);
